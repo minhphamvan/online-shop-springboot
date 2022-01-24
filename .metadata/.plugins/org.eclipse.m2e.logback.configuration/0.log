@@ -1,0 +1,25 @@
+2022-01-24 11:12:24,389 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-01-24 11:13:58,480 [Worker-4: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com:shop-springboot:0.0.1-SNAPSHOT @ D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot\pom.xml.
+2022-01-24 11:14:26,842 [Worker-7: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com:shop-springboot:0.0.1-SNAPSHOT @ D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot\pom.xml.
+2022-01-24 11:14:45,407 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-24 11:14:45,408 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-01-24 11:14:45,426 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-01-24 11:14:45,447 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 118 resources
+2022-01-24 11:14:47,876 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-24 11:14:47,876 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-01-24 11:14:47,876 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot\src\test\resources
+2022-01-24 11:14:53,841 [Worker-3: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com:shop-springboot:0.0.1-SNAPSHOT @ D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot\pom.xml.
+2022-01-24 11:14:55,808 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-24 11:14:55,808 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-01-24 11:14:56,148 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-01-24 11:14:56,177 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 118 resources
+2022-01-24 11:14:56,837 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-24 11:14:56,837 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-01-24 11:14:56,837 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot\src\test\resources
+2022-01-24 11:15:03,348 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-24 11:15:03,348 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-01-24 11:15:03,360 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-01-24 11:15:03,383 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 118 resources
+2022-01-24 11:15:03,450 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-24 11:15:03,450 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-01-24 11:15:03,450 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot\src\test\resources
