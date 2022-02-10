@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi tiết sản phẩm</title>
+<link rel="stylesheet" th:href="@{/admin/css/main.css}">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="dashboard">
+
+				<div th:replace="/admin/share/sidebar::sidebar"></div>
+
+				<div class="right">
+					<div class="right__content">
+						<div class="right__title">Bảng điều khiển</div>
+						<p class="right__desc">Chi tiết sản phẩm</p>
+
+						<div class="right__formWrapper">
+							<form th:action="@{'/admin/update-product/' + ${productDTO.id}}" method="post"
+								enctype="multipart/form-data" th:object="${productDTO}">
+								
+								<div class="right__inputWrapper">
+									<label for="title">Mã sản phẩm</label> <input type="text"
+										placeholder="Mã sản phẩm" th:value="${productDTO.id}" readonly>
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="image">Hình ảnh</label> 
+									<td data-label="Hình ảnh"><img
+										th:src="@{'/show-image?image=' + ${productDTO.image}}" alt=""></td>
+									<input type="file" name="imageFile" >
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Tên sản phẩm</label> <input type="text"
+										placeholder="Tên sản phẩm" th:value="${productDTO.name}" th:field="*{name}">
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Thuộc danh mục</label> 
+									<select id="select" th:field="*{categoryDTO.id}"> <!-- truyền vào id chứ không truyền vào object -->
+										<option th:each="categoryDTO : ${categoryDTOs}"
+											th:value="${categoryDTO.id}" th:text="${categoryDTO.name}">
+											</option>
+									</select>
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Giá sản phẩm</label> <input type="text"
+										placeholder="Giá sản phẩm" th:value="${productDTO.price}" th:field="*{price}">
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Sale còn</label> <input type="text"
+										placeholder="Sale còn" th:value="${productDTO.sale}" th:field="*{sale}">
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Số lượng</label> <input type="text"
+										placeholder="Số lượng" th:value="${productDTO.quantity}" th:field="*{quantity}">
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Đánh giá</label> 
+									<select id="select" th:field="*{rating}">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="desc">Mô tả</label>
+									<textarea name="" id="" cols="30" rows="10" placeholder="Mô tả" th:field="*{description}"></textarea>
+								</div>
+
+								<button class="btn" type="submit">Cập nhật</button>
+							</form>
+						</div>
+
+						<a th:href="@{/admin/show-all-product}" class="right__tableMore">
+							Xem tất cả sản phẩm<img
+							th:src="@{/client/assets/arrow-right-black.svg}" alt="">
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script th:src="@{/admin/js/main.js}"></script>
+</body>
+
+</html>

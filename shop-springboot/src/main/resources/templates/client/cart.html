@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EShop - Giỏ hàng</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="eCommerce HTML Template Free Download" name="keywords">
+<meta content="eCommerce HTML Template Free Download" name="description">
+
+<!-- Favicon -->
+<link th:href="@{/client/img/favicon.ico}" rel="icon">
+
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap"
+	rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+	rel="stylesheet">
+<link th:href="@{/client/lib/slick/slick.css}" rel="stylesheet">
+<link th:href="@{/client/lib/slick/slick-theme.css}" rel="stylesheet">
+
+<!-- Template Stylesheet -->
+<link th:href="@{/client/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Header -->
+	<div th:replace="share/header::header"></div>
+
+	<!-- Breadcrumb Start -->
+	<div class="breadcrumb-wrap">
+		<div class="container-fluid">
+			<ul class="breadcrumb">
+				<li class="breadcrumb-item"><a th:href="@{/index}">Trang
+						chủ</a></li>
+				<li class="breadcrumb-item active">Giỏ hàng</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Cart -->
+	<div class="cart-page">
+		<div class="container-fluid">
+			<div class="row" th:if="${check == true}">
+				<div class="col-lg-8">
+					<div class="cart-page-inner">
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								<thead class="thead-dark">
+									<tr>
+										<th>Sản phẩm</th>
+										<th>Giá</th>
+										<th>Số lượng</th>
+										<th>Tổng tiền</th>
+										<th>Xóa</th>
+									</tr>
+								</thead>
+
+								<tbody class="align-middle">
+									<tr th:each="entry : ${#session.getAttribute('cart')}">
+										<td>
+											<div class="img">
+												<a
+													th:href="@{'/details-product/' + ${entry.value.productDTO.id}}"><img
+													th:src="@{'/show-image?image=' + ${entry.value.productDTO.image}}"
+													alt="Image"></a>
+												<p th:text="${entry.value.productDTO.name}"></p>
+											</div>
+										</td>
+
+										<td th:text="${'$' + entry.value.productDTO.sale}"></td>
+
+										<td>
+											<div class="qty">
+												<input type="text" th:value="${entry.value.quantity}">
+											</div>
+										</td>
+
+										<td
+											th:text="${'$' + entry.value.quantity * entry.value.productDTO.sale}"></td>
+										<td>
+
+											<button>
+												<a
+													th:href="@{'/delete-from-cart/' + ${entry.value.productDTO.id}}"><i
+													class="fa fa-trash"></i></a>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="cart-page-inner">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="coupon">
+									<input type="text" placeholder="Mã giảm giá">
+									<button>Áp dụng</button>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<div class="cart-summary">
+									<div class="cart-content">
+										<h1>Giỏ hàng</h1>
+										<p>
+											Tổng tiền<span th:text="'$' + ${totalPrice}"></span>
+										</p>
+										<p>
+											Phí giao hàng<span>$10</span>
+										</p>
+										<h2>
+											Tổng cộng<span th:text="'$' + ${totalPrice + 10}"></span>
+										</h2>
+									</div>
+
+									<div class="cart-btn">
+										<button>Cập nhật</button>
+
+										<a th:href="@{/user/checkout}">
+											<button>Thanh toán</button>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" th:if="${check != true}">
+				<a th:href="@{/show-all-product/1}"
+					style="padding: 20px 0px 40px 550px"><img
+					th:src="@{/client/assets/arrow-left.svg}" alt=""> Giỏ hàng
+					trống. Tiếp tục mua hàng </a>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<!-- Footer -->
+	<div th:replace="share/footer::footer"></div>
+
+	<!-- JavaScript Libraries -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+	<script th:src="@{/client/lib/easing/easing.min.js}"></script>
+	<script th:src="@{/client/lib/slick/slick.min.js}"></script>
+
+	<!-- Template Javascript -->
+	<script th:src="@{/client/js/main.js}"></script>
+</body>
+</html>

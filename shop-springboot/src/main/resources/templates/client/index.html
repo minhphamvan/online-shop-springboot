@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Eshop - Trang chủ</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="eCommerce HTML Template Free Download" name="keywords">
+<meta content="eCommerce HTML Template Free Download" name="description">
+
+<!-- Favicon -->
+<link th:href="@{/client/img/favicon.ico}" rel="icon">
+
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap"
+	rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+	rel="stylesheet">
+<link th:href="@{/client/lib/slick/slick.css}" rel="stylesheet">
+<link th:href="@{/client/lib/slick/slick-theme.css}" rel="stylesheet">
+
+<!-- Template Stylesheet -->
+<link th:href="@{/client/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<div th:replace="share/header::header"></div>
+
+	<!-- Main Slider Start -->
+	<div class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3">
+					<nav class="navbar bg-light">
+						<ul class="navbar-nav">
+							<li class="nav-item"><a class="nav-link" th:href="@{/index}"><i
+									class="fa fa-home"></i>Trang chủ</a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{/show-all-product}"><i
+									class="fa fa-plus-square"></i>Tất cả sản phẩm</a></li>
+							<li class="nav-item"><a class="nav-link" href="#"><i
+									class="fa fa-shopping-bag"></i>Sản phẩm mới</a></li>
+							<li class="nav-item"><a class="nav-link" href="#"><i
+									class="fa fa-plus-square"></i>Sản phẩm bán chạy</a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{/wishlist}"><i
+									class="fa fa-plus-square"></i>Wishlist</a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{/cart}"><i
+									class="fa fa-plus-square"></i>Giỏ hàng</a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{/user/checkout}"><i
+									class="fa fa-plus-square"></i>Thanh toán</a></li>
+							<li class="nav-item"><a class="nav-link" th:href="@{/contact}"><i
+									class="fa fa-plus-square"></i>Liên hệ</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-6">
+					<div class="header-slider normal-slider">
+						<div class="header-slider-item">
+							<img th:src="@{/client/img/slider-1.jpg}" alt="Slider Image" />
+							<div class="header-slider-caption">
+								<p>Liên hệ quảng cáo</p>
+								<a class="btn" href=""><i class="fa fa-shopping-cart"></i>Mua
+									ngay</a>
+							</div>
+						</div>
+						<div class="header-slider-item">
+							<img th:src="@{/client/img/slider-1.jpg}" alt="Slider Image" />
+							<div class="header-slider-caption">
+								<p>Liên hệ quảng cáo</p>
+								<a class="btn" href=""><i class="fa fa-shopping-cart"></i>Mua
+									ngay</a>
+							</div>
+						</div>
+						<div class="header-slider-item">
+							<img th:src="@{/client/img/slider-1.jpg}" alt="Slider Image" />
+							<div class="header-slider-caption">
+								<p>Liên hệ quảng cáo</p>
+								<a class="btn" href=""><i class="fa fa-shopping-cart"></i>Mua
+									ngay</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="header-img">
+						<div class="img-item">
+							<img th:src="@{/client/img/category-1.jpg}" /> <a
+								class="img-text" href="">
+								<p>Liên hệ quảng cáo</p>
+							</a>
+						</div>
+						<div class="img-item">
+							<img th:src="@{/client/img/category-1.jpg}" /> <a
+								class="img-text" href="">
+								<p>Liên hệ quảng cáo</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Main Slider End -->
+
+	<!-- Brand Start -->
+	<div th:replace="share/brand::brand"></div>
+	<!-- Brand End -->
+
+	<!-- Feature Start-->
+	<div class="feature">
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col-lg-3 col-md-6 feature-col">
+					<div class="feature-content">
+						<i class="fab fa-cc-mastercard"></i>
+						<h2>Thanh toán an toàn</h2>
+						<p>Thanh toán an toàn</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 feature-col">
+					<div class="feature-content">
+						<i class="fa fa-truck"></i>
+						<h2>Vận chuyển nhanh chóng</h2>
+						<p>Vận chuyển nhanh chóng</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 feature-col">
+					<div class="feature-content">
+						<i class="fa fa-sync-alt"></i>
+						<h2>Dễ dàng đổi trả</h2>
+						<p>Dễ dàng đổi trả</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 feature-col">
+					<div class="feature-content">
+						<i class="fa fa-comments"></i>
+						<h2>Hỗ trợ 24/7</h2>
+						<p>Hỗ trợ 24/7</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Feature End-->
+
+	<!-- Liên hệ quảng cáo -->
+	<div class="category">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="category-item ch-400">
+						<img th:src="@{/client/img/category-3.jpg}" /> <a
+							class="category-name" href="">
+							<p>Liên hệ quảng cáo.</p>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="category-item ch-250">
+						<img th:src="@{/client/img/category-3.jpg}" /> <a
+							class="category-name" href="">
+							<p>Liên hệ quảng cáo.</p>
+						</a>
+					</div>
+					<div class="category-item ch-150">
+						<img th:src="@{/client/img/category-3.jpg}" /> <a
+							class="category-name" href="">
+							<p>Liên hệ quảng cáo.</p>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="category-item ch-150">
+						<img th:src="@{/client/img/category-6.jpg}" /> <a
+							class="category-name" href="">
+							<p>Liên hệ quảng cáo.</p>
+						</a>
+					</div>
+					<div class="category-item ch-250">
+						<img th:src="@{/client/img/category-3.jpg}" /> <a
+							class="category-name" href="">
+							<p>Liên hệ quảng cáo.</p>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="category-item ch-400">
+						<img th:src="@{/client/img/category-3.jpg}" /> <a
+							class="category-name" href="">
+							<p>Liên hệ quảng cáo.</p>
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Liên hệ -->
+	<div class="call-to-action">
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col-md-6">
+					<h1>Hỗ trợ 24/7</h1>
+				</div>
+				<div class="col-md-6">
+					<a href="tel:0981.576.005">0981.576.005</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Sản phẩm mới -->
+	<div class="featured-product product">
+		<div class="container-fluid">
+			<div class="section-header">
+				<h1>Sản phẩm mới</h1>
+			</div>
+			<div class="row align-items-center product-slider product-slider-4">
+				<div class="col-lg-3" th:each="productDTO : ${productDTOs}">
+					<div class="product-item">
+						<div class="product-title">
+							<a th:href="@{'/details-product/' + ${productDTO.id}}"
+								th:text="${productDTO.name}"></a>
+							<div class="ratting">
+								<i class="fa fa-star"
+									th:each="rate : ${#numbers.sequence(1,productDTO.rating)}"></i>
+							</div>
+						</div>
+
+						<div class="product-image">
+							<a href="#"> <img
+								th:src="@{'/show-image?image=' + ${productDTO.image}}"
+								alt="Product Image">
+							</a>
+							<div class="product-action">
+								<a th:href="@{'/add-to-cart/' + ${productDTO.id}}"><i class="fa fa-cart-plus"></i></a> <a href="#"><i
+									class="fa fa-heart"></i></a> <a
+									th:href="@{'/details-product/' + ${productDTO.id}}"><i
+									class="fa fa-search"></i></a>
+							</div>
+						</div>
+
+						<div class="product-price">
+							<h3 th:text="'$' + ${productDTO.price}">
+								<span>$</span>
+							</h3>
+							<a class="btn"
+								th:href="@{'/add-to-cart/' + ${productDTO.id}}"><i
+								class="fa fa-shopping-cart"></i>Mua ngay</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Nhận ưu đãi -->
+	<div class="newsletter">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+					<h1>Đăng kí nhận ưu đãi ngay !</h1>
+				</div>
+				
+				<div class="col-md-6">
+					<div class="form">
+						<input type="email" value="" placehoder="Nhập email">
+						<button type="submit">Gửi</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Sản phẩm bán chạy -->
+	<div class="recent-product product">
+		<div class="container-fluid">
+			<div class="section-header">
+				<h1>Sản phẩm bán chạy</h1>
+			</div>
+			<div class="row align-items-center product-slider product-slider-4">
+				<div class="col-lg-3" th:each="productDTO : ${productDTOs}">
+					<div class="product-item">
+						<div class="product-title">
+							<a th:href="@{'/details-product/' + ${productDTO.id}}"
+								th:text="${productDTO.name}"></a>
+							<div class="ratting">
+								<i class="fa fa-star"
+									th:each="rate : ${#numbers.sequence(1,productDTO.rating)}"></i>
+							</div>
+						</div>
+
+						<div class="product-image">
+							<a href="#"> <img
+								th:src="@{'/show-image?image=' + ${productDTO.image}}"
+								alt="Product Image">
+							</a>
+							<div class="product-action">
+								<a th:href="@{'/add-to-cart/' + ${productDTO.id}}"><i class="fa fa-cart-plus"></i></a> <a href="#"><i
+									class="fa fa-heart"></i></a> <a
+									th:href="@{'/details-product/' + ${productDTO.id}}"><i
+									class="fa fa-search"></i></a>
+							</div>
+						</div>
+
+						<div class="product-price">
+							<h3 th:text="'$' + ${productDTO.price}">
+								<span>$</span>
+							</h3>
+							<a class="btn"
+								th:href="@{'/add-to-cart/' + ${productDTO.id}}"><i
+								class="fa fa-shopping-cart"></i>Mua ngay</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Feedback -->
+	<div th:replace="share/feedback::feedback"></div>
+
+	<!-- Footer -->
+	<div th:replace="share/footer::footer"></div>
+
+	<!-- JavaScript Libraries -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+	<script th:src="@{/client/lib/easing/easing.min.js}"></script>
+	<script th:src="@{/client/lib/slick/slick.min.js}"></script>
+
+	<!-- Template Javascript -->
+	<script th:src="@{/client/js/main.js}"></script>
+</body>
+
+</html>

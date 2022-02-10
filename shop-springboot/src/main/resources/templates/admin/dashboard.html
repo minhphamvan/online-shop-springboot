@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/admin/css/main.css}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="dashboard">
+                
+				<div th:replace="/admin/share/sidebar::sidebar"></div>
+		
+                <div class="right">
+                    <div class="right__content">
+                        <div class="right__title">Bảng điều khiển</div>
+                        <p class="right__desc">Quản lý</p>
+
+                        <div class="right__cards">
+                            <a class="right__card" th:href="@{/admin/show-all-user}">
+                                <div class="right__cardTitle">Người dùng</div>
+                                <div class="right__cardNumber" th:text="${numberUser}" ></div>
+                                <div class="right__cardDesc">Xem Chi Tiết<img th:src="@{/admin/assets/arrow-right.svg}" alt=""></div>
+                            </a> 
+
+                            <a class="right__card" th:href="@{/admin/show-all-category}">
+                                <div class="right__cardTitle">Danh mục</div>
+                                <div class="right__cardNumber" th:text="${numberCategory}" ></div>
+                                <div class="right__cardDesc">Xem Chi Tiết<img th:src="@{/admin/assets/arrow-right.svg}" alt=""></div>
+                            </a>
+
+                            <a class="right__card" th:href="@{/admin/show-all-product}">
+                                <div class="right__cardTitle">Sản phẩm</div>
+                                <div class="right__cardNumber" th:text="${numberProduct}" ></div>
+                                <div class="right__cardDesc">Xem Chi Tiết<img th:src="@{/admin/assets/arrow-right.svg}" alt=""></div>
+                            </a>
+
+                            <a class="right__card" th:href="@{/admin/show-all-bill}">
+                                <div class="right__cardTitle">Đơn hàng</div>
+                                <div class="right__cardNumber" th:text="${numberBill}" ></div>
+                                <div class="right__cardDesc">Xem Chi Tiết<img th:src="@{/admin/assets/arrow-right.svg}" alt=""></div>
+                            </a>
+                        </div>
+
+                        <div class="right__table">
+                            <p class="right__tableTitle">Thống kê người dùng</p>
+
+							<div id="piechart_3d" style="width: 900px; height: 370px;"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/admin/js/main.js}"></script>
+    
+    <script type="text/javascript"
+		src="https://www.gstatic.com/charts/loader.js"></script>
+		
+	<script th:inline="javascript">
+		var real_data = /*[[${chartData}]]*/'noValue';
+	
+		google.charts.load("current", {
+			packages : [ "corechart" ]
+		});
+		google.charts.setOnLoadCallback(drawChart);
+		
+		function drawChart() {
+			var data = new google.visualization.DataTable();
+	            data.addColumn('string', 'Tỉnh thành');
+	            data.addColumn('number', 'Số người dùng');
+	            Object.keys(real_data).forEach(function(key) {
+	                data.addRow([ key, real_data[key] ]);
+	            });
+
+			var options = {
+				title : 'Theo địa chỉ',
+				is3D : true,
+			};
+
+			var chart = new google.visualization.PieChart(document
+					.getElementById('piechart_3d'));
+			chart.draw(data, options);
+		}
+	</script>
+</body>
+
+</html>

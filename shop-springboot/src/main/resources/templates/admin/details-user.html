@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thêm danh mục</title>
+<link rel="stylesheet" th:href="@{/admin/css/main.css}">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="dashboard">
+
+				<div th:replace="/admin/share/sidebar::sidebar"></div>
+
+				<div class="right">
+					<div class="right__content">
+						<div class="right__title">Bảng điều khiển</div>
+						<p class="right__desc">Chi tiết người dùng</p>
+
+						<div class="right__formWrapper">
+							<form th:action="@{'/admin/update-user/' + ${userDTO.id}}"
+								method="post" enctype="multipart/form-data"
+								th:object="${userDTO}">
+								
+								<div class="right__inputWrapper">
+									<label for="title">Mã</label> <input type="text"
+										placeholder="Mã" th:value="${userDTO.id}" readonly>
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="image">Hình ảnh</label>
+									<td data-label="Hình ảnh"><img
+										th:src="@{'/show-image?image=' + ${userDTO.image}}" alt=""></td>
+									<input type="file" name="imageFile" >
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Họ tên</label> <input type="text"
+										placeholder="Họ tên" th:value="${userDTO.name}"
+										th:field="*{name}">
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Địa chỉ</label> <input type="text"
+										placeholder="Địa chỉ" th:value="${userDTO.address}"
+										th:field="*{address}">
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Email</label> <input type="text"
+										placeholder="Email" th:value="${userDTO.email}"
+										th:field="*{email}">
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Số điện thoại</label> <input type="text"
+										placeholder="Số điện thoại" th:value="${userDTO.phone}"
+										th:field="*{phone}">
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Tên đăng nhập</label> <input type="text"
+										placeholder="Tên đăng nhập" th:value="${userDTO.username}"
+										th:field="*{username}" readonly>
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Mật khẩu</label> <input type="text"
+										placeholder="Mật khẩu" 
+										th:field="*{password}">
+								</div>
+
+								<div class="right__inputWrapper">
+									<label for="title">Vai trò</label> <select id="select"
+										th:field="*{role}">
+										<option value="ROLE_USER">Người dùng</option>
+										<option value="ROLE_ADMIN">Quản trị viên</option>
+									</select>
+								</div>
+								
+								<div class="right__inputWrapper">
+									<label for="title">Trạng thái</label> <select id="select"
+										th:field="*{active}">
+										<option value="1">Active</option>
+										<option value="0">Block</option>
+									</select>
+								</div>
+
+								<button class="btn" type="submit">Cập nhật</button>
+							</form>
+						</div>
+
+						<a th:href="@{/admin/show-all-user}" class="right__tableMore">
+							Xem tất cả người dùng<img
+							th:src="@{/admin/assets/arrow-right-black.svg}" alt="">
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script th:src="@{/admin/js/main.js}"></script>
+</body>
+
+</html>

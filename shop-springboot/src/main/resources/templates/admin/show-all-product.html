@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem tất cả sản phẩm</title>
+    <link rel="stylesheet" th:href="@{/admin/css/main.css}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="dashboard">
+                
+				<div th:replace="/admin/share/sidebar::sidebar"></div>
+		
+                <div class="right">
+                    <div class="right__content">
+                        <div class="right__title">Bảng điều khiển</div>
+                        <p class="right__desc">Xem tất cả sản phẩm</p>
+                        <div class="right__table">
+                            <div class="right__tableWrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Mã sản phẩm</th>
+                                            
+                                            <th>Hình ảnh</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Thuộc danh mục</th>
+                                            
+                                            <th>Giá sản phẩm</th>
+                                            <th>Sale còn</th>
+                                            <th>Số lượng</th>
+
+                                            <th>Rating</th>
+                                            <th>Mô tả</th>
+                                            
+                                            <th>Chi tiết</th>
+                                            <th>Sửa</th>
+                                            <th>Xoá</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr th:each="productDTO : ${productDTOs}">
+                                            <td data-label="Mã sản phẩm" th:text="${productDTO.id}"></td>
+                                            <td data-label="Hình ảnh"><img th:src="@{'/show-image?image=' + ${productDTO.image}}" alt=""></td>
+                                            <td data-label="Tên sản phẩm" th:text="${productDTO.name}"></td>
+                                            <td data-label="Thuộc danh mục" th:text="${productDTO.categoryDTO.name}"></td>
+                                            <td data-label="Giá sản phẩm" th:text="${productDTO.price}"></td>
+                                            <td data-label="Sale còn" th:text="${productDTO.sale}"></td>
+                                            <td data-label="Số lượng còn lại" th:text="${productDTO.quantity}"></td>
+                                            <td data-label="Đánh giá" th:text="${productDTO.rating}"></td>
+                                            <td data-label="Mô tả" th:text="${productDTO.description}"></td>
+                                        
+                                            <td data-label="Chi tiết" class="right__iconTable">
+                                                <a th:href="@{'/admin/details-product/' + ${productDTO.id}}"><img th:src="@{/admin/assets/icon-book.svg}" alt=""></a>
+                                            </td>
+                                            <td data-label="Sửa" class="right__iconTable">
+                                                <a th:href="@{'/admin/details-product/' + ${productDTO.id}}"><img th:src="@{/admin/assets/icon-edit.svg}" alt=""></a>
+                                            </td>
+                                            <td data-label="Xoá" class="right__iconTable">
+                                                <a th:href="@{'/admin/delete-product/' + ${productDTO.id}}"><img th:src="@{/admin/assets/icon-trash-black.svg}" alt=""></a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <a th:href="@{/admin/add-product}" class="right__tableMore" style="width: 560px; padding-top: 15px;">
+                                    Thêm sản phẩm<img th:src="@{/admin/assets/arrow-right-black.svg}" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/admin/js/main.js}"></script>
+</body>
+
+</html>

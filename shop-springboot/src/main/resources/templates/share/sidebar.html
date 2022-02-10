@@ -1,0 +1,52 @@
+<!-- Side Bar Start -->
+<div class="col-lg-3 sidebar" th:fragment="sidebar">
+	<div class="sidebar-widget brands">
+		<h2 class="title">Tất cả danh mục</h2>
+		<ul th:each="categoryDTO : ${categoryDTOs}">
+			<li><a href="#" th:text="${categoryDTO.name}"></a><span>(45)</span></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-widget widget-slider">
+		<div class="sidebar-slider normal-slider">
+
+			<div class="product-item" th:each="productDTO : ${productDTOs}">
+				<div class="product-title">
+					<a href="#" th:text="${productDTO.name}"></a>
+					<div class="ratting">
+						<i class="fa fa-star"
+							th:each="rate : ${#numbers.sequence(1,productDTO.rating)}"></i>
+					</div>
+				</div>
+
+				<div class="product-image">
+					<a href="#"> <img
+						th:src="@{'/show-image?image=' + ${productDTO.image}}"
+						alt="Product Image">
+					</a>
+					<div class="product-action">
+						<a th:href="@{'/add-to-cart/' + ${productDTO.id}}"><i class="fa fa-cart-plus"></i></a> <a href="#"><i
+							class="fa fa-heart"></i></a> <a th:href="@{'/details-product/' + ${productDTO.id}}"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+
+				<div class="product-price">
+					<h3 th:text="'$' + ${productDTO.price}">
+						<span>$</span>
+					</h3>
+					<a class="btn" th:href="@{'/add-to-cart/' + ${productDTO.id}}"><i class="fa fa-shopping-cart"></i>Mua
+						ngay</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="sidebar-widget tag">
+		<h2 class="title">Tìm kiếm</h2>
+		<a href="#" th:each="categoryDTO : ${categoryDTOs}"
+			th:text="${categoryDTO.name}"></a>
+	</div>
+</div>
+<!-- Side Bar End -->
+

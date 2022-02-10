@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xem chi tiết đơn hàng</title>
+<link rel="stylesheet" th:href="@{/admin/css/main.css}">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="dashboard">
+
+				<div th:replace="/admin/share/sidebar::sidebar"></div>
+
+				<div class="right">
+					<div class="right__content">
+						<div class="right__title">Bảng điều khiển</div>
+						<p class="right__desc">Xem chi tiết đơn hàng</p>
+						<div class="right__table">
+							<div class="right__tableWrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Mã</th>
+											<th>Tên sản phẩm</th>
+											<th>Hình ảnh</th>
+											<th>Giá sản phẩm</th>
+											<th>Số lượng</th>
+											<th>Tổng tiền</th>
+											
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr th:each="billProduct : ${billProductDTOs}">
+												<td th:text="${billProduct.productDTO.id}"></td>
+												<td><a
+													th:href="@{'/details-product/' + ${billProduct.productDTO.id}}"
+													th:text="${billProduct.productDTO.name}"> </a></td>
+	
+												<td><a
+													th:href="@{'/details-product/' + ${billProduct.productDTO.id}}"><img
+														th:src="@{'/show-image?image=' + ${billProduct.productDTO.image}}"
+														alt="Image Product" style="width: 100px; height: 100px"></a>
+												</td>
+	
+												<td th:text="${'$' + billProduct.productDTO.sale}"></td>
+												<td th:text="${billProduct.quantity}"></td>
+												<td th:text="${'$' + billProduct.subPrice}"></td>
+										</tr>
+
+									</tbody>
+								</table>
+
+								<a th:href="@{/admin/show-all-bill}" class="right__tableMore">
+									Xem tất cả đơn hàng<img
+									th:src="@{/admin/assets/icon-return.svg}" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script th:src="@{/admin/js/main.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<div th:fragment="header">
+
+	<!-- Top bar Start -->
+	<div class="top-bar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<i class="fa fa-envelope"></i> minhpham@gmail.com
+				</div>
+				<div class="col-sm-6">
+					<i class="fa fa-phone-alt"></i> 0981.576.005
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Top bar End -->
+
+	<!-- Nav Bar Start -->
+	<div class="nav">
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+				<a href="#" class="navbar-brand">MENU</a>
+				<button type="button" class="navbar-toggler" data-toggle="collapse"
+					data-target="#navbarCollapse">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse justify-content-between"
+					id="navbarCollapse">
+					<div class="navbar-nav mr-auto">
+						<a th:href="@{/index}" class="nav-item nav-link active">Trang
+							chủ</a>
+
+						<div class="nav-item dropdown">
+							<a th:href="@{/show-all-product}"
+								class="nav-link dropdown-toggle" data-toggle="dropdown">Danh
+								mục</a>
+							<div class="dropdown-menu">
+								<a href="#" class="dropdown-item"
+									th:each="categoryDTO : ${categoryDTOs}"
+									th:text="${categoryDTO.name}"></a>
+							</div>
+						</div>
+
+						<a th:href="@{/show-all-product/1}" class="nav-item nav-link">Tất
+							cả sản phẩm</a> <a th:href="@{/wishlist}" class="nav-item nav-link">Wishlist</a>
+						<a th:href="@{/cart}" class="nav-item nav-link">Giỏ hàng</a> <a
+							th:href="@{/user/checkout}" class="nav-item nav-link">Thanh
+							toán</a> <a th:href="@{/user/my-info}" class="nav-item nav-link">My
+							Account</a> <a th:href="@{/admin}" class="nav-item nav-link">Trang
+							quản trị</a> <a th:href="@{/contact}" class="nav-item nav-link">Liên
+							hệ</a>
+					</div>
+
+					<div class="navbar-nav ml-auto">
+						<div class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle"
+								data-toggle="dropdown">Tài khoản</a>
+							<div class="dropdown-menu">
+								<a th:href="@{/login}" class="dropdown-item">Đăng nhập</a> <a
+									th:href="@{/register}" class="dropdown-item">Đăng kí</a> <a
+									th:href="@{/forget-password}" class="dropdown-item">Quên
+									mật khẩu?</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- Nav Bar End -->
+
+	<!-- Bottom Bar Start -->
+	<div class="bottom-bar">
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col-md-3">
+					<div class="logo">
+						<a th:href="@{/index}"> <img th:src="@{/client/img/logo.png}"
+							alt="Logo">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="search">
+						<input type="text" name="search" placeholder="Tìm kiếm">
+						<button>
+							<i class="fa fa-search"></i>
+						</button>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="user">
+						<a th:href="@{/wishlist}" class="btn wishlist"> <i
+							class="fa fa-heart"></i>
+						</a> <a th:href="@{/cart}" class="btn cart"> <i
+							class="fa fa-shopping-cart"></i> <span th:if="${check == true}"
+							th:text="${'(' + #session.getAttribute('cart').size()} + ')'">
+						</span>
+
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Bottom Bar End -->
+
+</div>
