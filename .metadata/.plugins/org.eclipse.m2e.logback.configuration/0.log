@@ -23,3 +23,17 @@
 2022-01-24 11:15:03,450 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-01-24 11:15:03,450 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-01-24 11:15:03,450 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot\src\test\resources
+2022-02-10 16:51:23,014 [Worker-12: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-02-10 16:52:42,124 [Worker-7: Launching Executing install in D__JavaSpring_class-spring08_SECTION of SPRING BOOT_shop-springboot] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot
+2022-02-10 16:52:42,146 [Worker-7: Launching Executing install in D__JavaSpring_class-spring08_SECTION of SPRING BOOT_shop-springboot] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2022-02-10 16:59:57,732 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 16:59:57,733 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 16:59:57,772 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 16:59:57,808 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 118 resources
+2022-02-10 16:59:57,881 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 16:59:57,882 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 16:59:57,882 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot\src\test\resources
+2022-02-10 17:20:01,543 [Worker-11: Launching Executing clean in D__JavaSpring_class-spring08_SECTION of SPRING BOOT_shop-springboot] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot
+2022-02-10 17:20:01,543 [Worker-11: Launching Executing clean in D__JavaSpring_class-spring08_SECTION of SPRING BOOT_shop-springboot] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2022-02-10 17:20:11,139 [Worker-19: Launching Executing install in D__JavaSpring_class-spring08_SECTION of SPRING BOOT_shop-springboot] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot
+2022-02-10 17:20:11,139 [Worker-19: Launching Executing install in D__JavaSpring_class-spring08_SECTION of SPRING BOOT_shop-springboot] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
