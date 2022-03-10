@@ -37,3 +37,20 @@
 2022-02-10 17:20:01,543 [Worker-11: Launching Executing clean in D__JavaSpring_class-spring08_SECTION of SPRING BOOT_shop-springboot] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
 2022-02-10 17:20:11,139 [Worker-19: Launching Executing install in D__JavaSpring_class-spring08_SECTION of SPRING BOOT_shop-springboot] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot
 2022-02-10 17:20:11,139 [Worker-19: Launching Executing install in D__JavaSpring_class-spring08_SECTION of SPRING BOOT_shop-springboot] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2022-03-10 12:25:58,660 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-03-10 12:28:06,315 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-03-10 12:28:06,325 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-03-10 12:28:06,332 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-03-10 12:28:06,379 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 118 resources
+2022-03-10 12:28:06,744 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-03-10 12:28:06,744 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-03-10 12:28:06,744 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot\src\test\resources
+2022-03-10 12:28:15,491 [Worker-7: Launching Executing install in D__JavaSpring_class-spring08_SECTION of SPRING BOOT_shop-springboot] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot
+2022-03-10 12:28:15,492 [Worker-7: Launching Executing install in D__JavaSpring_class-spring08_SECTION of SPRING BOOT_shop-springboot] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2022-03-10 12:28:15,568 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-03-10 12:28:15,568 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-03-10 12:28:15,569 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-03-10 12:28:15,569 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-03-10 12:28:15,572 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-03-10 12:28:15,573 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-03-10 12:28:15,573 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JavaSpring\class-spring08\SECTION of SPRING BOOT\shop-springboot\src\test\resources
